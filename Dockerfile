@@ -26,7 +26,7 @@ COPY app.log /datos
 # Copia el contenido del directorio "docs" desde el directorio de la máquina Host donde se encuentra este Dockerfile al directorio "docs" del directorio de trabajo por defecto '/datos1'(Si no existe ese directorio en "/datos1", se crea automáticamente)
 ADD docs docs
 # Copia todos los archivos que hagan match con la expresión "f*" del directorio de la máquina Host donde se encuentra este Dockerfile al directorio "/datos" del contenedor
-ADD f* /datos
+ADD f* /datos/
 # Descomprime el archivo comprimido "f.tar" del directorio de la máquina Host donde se encuentra este Dockerfile en el directorio de trabajo por defecto '/datos1'
 # Si se desea copiar este archivo comprimido "f.tar" al contenedor, se debe usar la instrucción COPY
 ADD f.tar .
